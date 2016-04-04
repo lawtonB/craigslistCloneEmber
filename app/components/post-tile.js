@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-    sortBy: ['date:asc'],
+    sortBy: ['date:desc'],
     sortPostsAsc: Ember.computed.sort('posts', 'sortBy')
 });

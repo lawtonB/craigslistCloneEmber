@@ -14,9 +14,12 @@ export default Ember.Route.extend({
       this.transitionTo('admin');
     },
     destroyCategory(category) {
-      if(confirm("Hit 'OK' to delete this category")){
-        category.destroyRecord();
-      }
+      var post_deletions = category.get('posts').map(function(post){
+        return post.destroyRecord();
+      });
+      Ember.RSVP.all(post_deletions).then(function(){
+        return category.destroyRecord();
+      });
     },
     updateCategory(category, params){
         Object.keys(params).forEach(function(key){
@@ -36,5 +39,6 @@ export default Ember.Route.extend({
         });
         this.transitionTo('admin');
       }
+
     }
 });
