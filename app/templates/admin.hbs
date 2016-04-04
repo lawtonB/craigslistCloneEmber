@@ -1,6 +1,6 @@
 <ul>
   {{#each model as |category|}}
-    {{category-tile category=category}} <button {{action 'destroyCategory' category}}>Delete</button>
+    {{category-tile category=category}} <button {{action 'destroyCategory' category}}>Delete</button> {{update-category category=category update="updateCategory"}}
   {{/each}}
 </ul>
 {{new-category save="saveCategory"}}

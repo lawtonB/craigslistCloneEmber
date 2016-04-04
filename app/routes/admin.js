@@ -14,6 +14,15 @@ export default Ember.Route.extend({
       if(confirm("Hit 'OK' to delete this category")){
         category.destroyRecord();
       }
-    }
+    },
+    updateCategory(category, params){
+        Object.keys(params).forEach(function(key){
+          if(params[key]!==undefined) {
+            category.set(key,params[key]);
+          }
+        });
+        category.save();
+        this.transitionTo('admin');
+      }
   }
 });

@@ -1,0 +1,10 @@
+{{#if updateCategoryForm}}
+  <form>
+    <label for="title">Title:
+      {{input value=title id="title" placeholder=category.title}}
+    </label>
+    <button {{action 'update' category}}>Submit</button>
+  </form>
+{{else}}
+  <button {{action 'updateCategoryFormShow'}}>Update Category</button>
+{{/if}}
