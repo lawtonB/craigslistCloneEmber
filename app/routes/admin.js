@@ -4,10 +4,11 @@ export default Ember.Route.extend({
   model() {
     return this.store.findAll('category');
   },
-
   actions: {
     destroyCategory(category) {
-      category.destroyRecord();
+      if(confirm("Hit 'OK' to delete this category")){
+        category.destroyRecord();
+      }
     }
   }
 });

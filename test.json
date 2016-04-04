@@ -1,4 +1,5 @@
-{ "categories": [{
-  "title": "jobs"
-  }]
+{ "categories": [
+  { "title": "jobs"
+  }, {
+    "title": "cars for sale"}]
 }
