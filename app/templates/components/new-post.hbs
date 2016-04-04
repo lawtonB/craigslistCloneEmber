@@ -1,0 +1,19 @@
+{{#if newPostForm}}
+  <form>
+    <label for='title'>Title:
+      {{input value=title id='title'}}
+    </label>
+    <label for='content'>Content:
+      {{input value=content id='content'}}
+    </label>
+    <label for='author'>Author:
+      {{input value=author id='author'}}
+    </label>
+    <label for='date'>Date:
+      {{input type='date' value=date id='date'}}
+    </label>
+    <button {{action 'savePost'}}>Submit</button>
+  </form>
+  {{else}}
+  <button {{action 'showNewPostForm'}}>add new post</button>
+{{/if}}

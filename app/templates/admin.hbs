@@ -1,6 +1,7 @@
 <ul>
   {{#each model.categories as |category|}}
-    {{category-tile category=category}} <button {{action 'destroyCategory' category}}>Delete</button> {{update-category category=category update="updateCategory"}}
+    {{category-tile category=category}} <button {{action 'destroyCategory' category}}>Delete</button> {{update-category category=category update="updateCategory"}} {{new-post savePost="savePost" category=category}}
+    {{post-tile posts=category.posts}}
   {{/each}}
 </ul>
 {{new-category save="saveCategory"}}

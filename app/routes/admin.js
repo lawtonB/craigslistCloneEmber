@@ -26,6 +26,15 @@ export default Ember.Route.extend({
         });
         category.save();
         this.transitionTo('admin');
+      },
+      savePost(params) {
+        var newPost = this.store.createRecord('post', params);
+        var category = params.category;
+        category.get('posts').addObject(newPost);
+        newPost.save().then(function() {
+          return category.save();
+        });
+        this.transitionTo('admin');
       }
-  }
+    }
 });
