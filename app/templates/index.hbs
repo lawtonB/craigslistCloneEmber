@@ -1,5 +1,5 @@
 <ul>
   {{#each model as |category|}}
-    {{category-tile category=category}}
+    {{#link-to 'category' category.id}}{{category-tile category=category}}{{/link-to}}
   {{/each}}
 </ul>
