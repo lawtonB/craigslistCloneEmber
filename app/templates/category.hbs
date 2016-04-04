@@ -1,8 +1,5 @@
 {{model.title}}
+
 <ul>
-  {{#each model.posts as |post|}}
-  <li>
-    {{#link-to 'post' post.id}}{{post.title}}{{/link-to}}
-  </li>
-  {{/each}}
+  {{post-tile posts=model.posts}}
 </ul>

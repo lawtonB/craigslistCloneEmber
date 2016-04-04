@@ -1,5 +1,5 @@
-{{#each posts as |post|}}
-  <p>{{post.author}}</p>
-  <p>{{post.title}}</p>
-  <p>{{post.content}}</p>
+{{#each sortPostsAsc as |post|}}
+<li>
+  {{#link-to 'post' post.id}}{{post.title}}{{/link-to}}
+</li>
 {{/each}}
