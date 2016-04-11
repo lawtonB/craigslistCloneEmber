@@ -1,7 +1,6 @@
 # Craigslist
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+this website clones some of the basic functionality of craigslist and demonstrates mastery of one to many relationships in ember js using firebase.
 
 ## Prerequisites
 
